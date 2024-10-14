@@ -42,7 +42,6 @@ def ordenada(l,x = True):
   return False
  
 #5 . Escriba una función llamada duplicado que tome una lista y devuelva True si tiene algún elemento duplicado. La función no debe modificar la lista
-lista3=[1,2,3,4,5,1]
 def duplicado(l):
  if len(l) == 1:
   return False  
@@ -150,7 +149,7 @@ def sumatiempo(t1,t2):
  if t1[2]+t2[2]>=60:
   st=(st[0],st[1]+1,st[2]-60)
  
- elif t1[1]+t2[1]>=60:
+ if t1[1]+t2[1]>=60:
   st=(st[0]+1,st[1]-60,st[2])
 
  return st
