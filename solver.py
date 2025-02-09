@@ -1,32 +1,33 @@
-
-def leer_archivo(archivo):
+def leer_archivo():
+    archivo=input("Ingrese el nombre o ruta del archivo: ");
     laberinto=open(archivo,"r")
-    filas = laberinto.readlines()
+    filas=laberinto.readlines()
     laberinto.close()
     return filas
 
-def alcanza_objetivo(filas_laberinto):
-    llego_meta= False
-    imposible=False
+def alcanza_objetivo(filas):
     i=0
     j=0
     camino=[]
-    while not llego_meta and filas_laberinto[j-1][i] !="\n" and not imposible:
+    llego_meta=False
+    imposible= False
+    while not llego_meta and not imposible and filas[j-1][i]!="\n":
         j=0
-        camino=[]
-        while j != len(filas_laberinto) and filas_laberinto[j][i]!="1":
+        while j!= len(filas) and filas[j][i]!="1":
             camino.append((j+1,i+1))
-            if filas_laberinto[j][i] == "X":
+            if filas[j][i]=="X":
                 llego_meta=True
             j+=1
-        if filas_laberinto[1][i+1]=="1":
-            imposible= True
+        if filas[0][i+1]=="1":
+            imposible=True
         i+=1
-    return llego_meta,camino       
-        
+    if not llego_meta:
+        camino.clear()
     
+    return llego_meta,camino
 
-if __name__ == "__main__":
-    filas= leer_archivo(r"d:\Usuario\Escritorio\Workspace\C\prog2\laberinto.txt")
-    print(alcanza_objetivo(filas))
+if __name__=="__main__":
+    filas_laberinto=leer_archivo()
+    solver=alcanza_objetivo(filas_laberinto)
+    print(solver)
     
