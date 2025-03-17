@@ -1,0 +1,22 @@
+Leche,1200
+Queso untable,2350
+Yogur,1455
+Arroz,3500
+Fideos,959
+Suavizante,8240
+Papel higienico,5780
+Servilletas,4320
+Manzanas,3040
+Bananas,4320
+Queso,6500
+Lentejas,3200
+Aceite de girasol,2700
+Aceite de oliva,12600
+Salchichas,2300
+Manteca,3500
+Sal,2000
+Lavandina,6000
+Huevos,4300
+Cafe,7050
+Mermelada,5400
+Dulce de leche,5300

@@ -1,0 +1,7 @@
+Leche,6
+Yogur,4
+Cafe,1
+Aceite de girasol,2
+Arroz,3
+Lentejas,1
+Papel higienico,4
